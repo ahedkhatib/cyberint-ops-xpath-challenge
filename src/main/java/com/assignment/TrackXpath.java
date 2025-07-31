@@ -13,7 +13,7 @@ import java.util.*;
 
 public class TrackXpath {
     private static final String LOG_FILE = "xpath_results.txt";
-    private static final String XPATH_FILE = "src/main/java/com/assignment/xpath.txt";
+    private static final String XPATH_FILE = "src/main/java/com/assignment/xpaths.txt";
     private static final String PAGE_URL = "https://support.mozilla.org/en-US/questions/firefox?show=all";
     private static final String HIGHLIGHT_CLASS = "highlighted-element";
     private static final String HIGHLIGHT_STYLE = "3px solid red";
@@ -53,7 +53,7 @@ public class TrackXpath {
                 status = addHighlightToElement(driver, xpath);
 
                 if ("NO_MATCH".equals(status)) {
-                    System.out.println("No elements matched: " + xpath);
+                    System.out.println("No elements matched: " + xpath +"\n");
                     writeLog(xpath, "NO MATCH");
                 } else {
                     System.out.println("Highlighted successfully!\n");
