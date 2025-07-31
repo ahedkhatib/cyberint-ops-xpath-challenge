@@ -1,6 +1,6 @@
 # Cyberint Ops XPath Challenge
 
-This repository contains a complete solution to the **Cyberint-Ops XPath Challenge**, where the task is to dynamically locate and highlight specific elements on a forum page using Selenium and XPath selectors.
+This repository contains a complete solution to the Cyberint-Ops XPath Challenge, where the main task is to write reliable and generic XPath expressions to locate specific elements on the Firefox support forum. The provided Java program with Selenium is an additional tool to verify and highlight the correctness of those expressions automatically.
 
 ---
 
