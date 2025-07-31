@@ -113,7 +113,7 @@ cd cyberint-ops-xpath-challenge
 
 ###  Option 1: Run Using IntelliJ IDEA (or any Java IDE)
 
-1. Open **IntelliJ IDEA** or **Eclipse**.
+1. Open **IntelliJ IDEA**.
 2. Click **Open** and select the project folder `cyberint-ops-xpath-challenge`.
 3. IntelliJ will detect it's a **Maven project** and automatically import dependencies.
 4. Open the file:  
