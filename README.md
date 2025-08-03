@@ -35,59 +35,59 @@ This project successfully finds and highlights the following using XPath:
 1. **Top bar “Ask a Question” button**
 
 
-`//a[contains(@class,'sumo-nav--link') and contains(text(), 'Ask a Question')]`
+`.//a[contains(@class,'sumo-nav--link') and contains(text(), 'Ask a Question')]`
 
 2. **Top-right search input box**
 
-`//form[@id='support-search-sidebar']/input[@id='search-q']`
+`.//form[@id='support-search-sidebar']/input[@id='search-q']`
 
 3. **First post on the page**
 
-`//article[@class='forum--question-item'][1]`
+`.//article[@class='forum--question-item'][1]`
 
 4. **First 5 posts**
 
-`//article[@class='forum--question-item' and position()<=5]`
+`.//article[@class='forum--question-item' and position()<=5]`
 
 5. **Publishing time of the first post**
 
-`//article[@class='forum--question-item'][1]//p[@class='user-meta-asked-by']/text()[contains(.,'ago')]`
+`.//article[@class='forum--question-item'][1]//p[@class='user-meta-asked-by']/text()[contains(.,'ago')]`
 
 6. **All responded posts (posts with replies)**
 
-`//article[@class='forum--question-item']//li[number(span[@class='forum--meta-val'])>0 and span[@class='forum--meta-key' and contains(., 'replies')]]`
+`.//article[@class='forum--question-item'] [ .//li[ span[@class='forum--meta-key' and contains(text(), 'repl')] and number(span[@class='forum--meta-val']) > 0 ]]`
 
 7. **Posts that say “1 hour ago”**
 
-`//article[@class='forum--question-item']//p[@class='user-meta-asked-by']/text()[contains(.,'1 hour ago')]`
+`.//article[@class='forum--question-item'][.//p[@class='user-meta-asked-by']/text()[contains(.,'1 hour ago')]]`
 
 8. **Posts with `?` in the title**
 
-`//article[@class='forum--question-item']//h2/a[contains(text(), '?')]`
+`.//article[@class='forum--question-item'][.//h2[@class='forum--question-item-heading']/a[contains((text()), '?')]]`
 
 9. **Posts where the author's name starts with D or d**
 
-`//article[@class='forum--question-item']//p/strong/a[starts-with(text(), 'D') or starts-with(text(), 'd')]`
+`.//article[@class='forum--question-item'][.//p[@class='user-meta-asked-by']/strong/a[starts-with(text(), 'D') or starts-with(text(), 'd')]]`
 
 10. **Posts with more than 2 replies**
 
-`//article[@class='forum--question-item']//li[span[@class='forum--meta-key' and contains(text(), 'replies')] and number(span[@class='forum--meta-val']) > 2]`
+`.//article[@class='forum--question-item'][.//li[span[@class='forum--meta-key' and contains(text(), 'replies')] and number(span[@class='forum--meta-val']) > 2]]`
 
 11. **Posts whose title starts with “P” or “p”**
 
-`//article[@class='forum--question-item']//h2/a[starts-with(.,'P') or starts-with(., 'p')]`
+`.//article[@class='forum--question-item'][.//h2[@class='forum--question-item-heading']/a[starts-with(.,'P') or starts-with(., 'p')]]`
 
 12. **Posts whose title length is 14 characters or more**
 
-`//article[@class='forum--question-item']//h2/a[string-length(text()) >=14]`
+`.//article[@class='forum--question-item'][.//h2[@class='forum--question-item-heading']/a[string-length(text()) >=14]]`
 
 13. **Posts tagged with “Windows 11”**
 
-`//article[@class='forum--question-item']//li/a[@class='tag-name'][contains(text(), 'Windows 11')]`
+`.//article[@class='forum--question-item'][.//li/a[@class='tag-name'][contains(text(), 'Windows 11')]]`
 
 14. **Posts with 0 replies**
 
-`//article[@class='forum--question-item']//li[number(span[@class='forum--meta-val'])=0 and span[@class='forum--meta-key' and contains(., 'replies')]]`
+`.//article[@class='forum--question-item'][.//li[number(span[@class='forum--meta-val'])=0 and span[@class='forum--meta-key' and contains(., 'replies')]]]`
 
 
 All XPath expressions are stored in `xpaths.txt`.
