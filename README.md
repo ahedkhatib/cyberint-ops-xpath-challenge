@@ -139,7 +139,7 @@ mvn clean compile exec:java
 #### ️ Run in headless mode (no browser window)
 
 ```bash
-mvn clean compile exec:java -Dexec.args="--headless"
+mvn clean compile exec:java "-Dexec.args=--headless"
 ```
 
 ---
